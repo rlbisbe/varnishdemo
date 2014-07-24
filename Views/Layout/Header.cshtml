@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#">New features</a>
+          <a class="blog-nav-item" href="#">Press</a>
+          <a class="blog-nav-item" href="#">New hires</a>
+          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item" href="#">G: @ViewData["now"]</a>
+          <a class="blog-nav-item" href="#">R: <span id="renderedOnHeader"></span></a>
+        </nav>
+      </div>
+    </div>
+
+	<script>
+		var time = new Date();
+		$("#renderedOnHeader").text(("0" + time.getHours()).slice(-2) + ":" + 
+		    ("0" + time.getMinutes()).slice(-2) + ":" + 
+		    ("0" + time.getSeconds()).slice(-2));
+	</script>
